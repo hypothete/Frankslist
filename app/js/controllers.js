@@ -9,7 +9,7 @@ app.controller("appCtrl", function($scope, itemService, playerService){
 
 	var countdown = function(){
 		if($scope.player.time > 0){
-			$scope.player.time -= 1;
+			$scope.player.time -= 100;
 
 			var date = new Date(null);
 			date.setSeconds($scope.player.time);
@@ -18,6 +18,24 @@ app.controller("appCtrl", function($scope, itemService, playerService){
 			
 			var timer = setTimeout(countdown, 1000);
 		}
+		else{
+			console.log($scope.player.time);
+			if($scope.player.money >= 1000){
+				if($scope.player.gdh > 75){
+					window.location="index.html#/winhigh"; //what a hack. do this in angular.
+				}
+				else{
+					window.location="index.html#/win";
+				}
+					
+			}
+			else{
+				
+					window.location="index.html#/lose";
+				
+			}
+		}
+
 	};
 	countdown();
 });

@@ -20,5 +20,17 @@ app.config(function($routeProvider){
 		templateUrl:"partials/list.html",
 		controller:"listCtrl"
 	})
+		.when('/winhigh',
+	{
+		templateUrl:"partials/winhigh.html"
+	})
+			.when('/lose',
+	{
+		templateUrl:"partials/lose.html"
+	})
+		.when('/win',
+	{
+		templateUrl:"partials/win.html"
+	})
 	.otherwise({redirectTo: '/'});
 })
