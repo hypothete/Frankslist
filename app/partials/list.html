@@ -1,0 +1,29 @@
+<h2><i>Online Listings</i></h2>
+<p><i>Online sale prices are subject to change based on demand.</i><p>
+<table class="table">
+	<tr ng-repeat="item in items.forsale">
+		<td><strong>{{item.name}}</strong></td>
+		<td>{{item.description}}</td>
+		<td><b>GDH</b>
+			<div class="progress active">
+    			<div class="bar" style="width: {{item.gdh}}%;">{{item.gdh}}</div>
+    		</div>
+		</td>
+		<td><a ng-click="items.sellItem(item)">Sell for ${{item.sellprice}}</a></td>
+		<td><a ng-click="items.placeItem(item)">Remove</a></td>
+	</tr>
+</table>
+
+<h2><i>For Sale</i></h2>
+<table class="table">
+	<tr ng-repeat="item in items.forbuy">
+		<td><strong>{{item.name}}</strong></td>
+		<td>{{item.description}}</td>
+		<td><b>GDH</b>
+			<div class="progress active">
+    			<div class="bar" style="width: {{item.gdh}}%;">{{item.gdh}}</div>
+    		</div>
+		</td>
+		<td><a ng-click="items.buyItem(item)">Buy for ${{item.sellprice}}</a></td>
+	</tr>
+</table>

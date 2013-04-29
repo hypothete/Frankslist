@@ -1,0 +1,9 @@
+<h2>Inventory</h2>
+<table class="table">
+	<tr ng-repeat="item in items.inventory">
+		<td><strong>{{item.name}}</strong></td>
+		<td>{{item.description}}</td>
+		<td><a ng-click="player.inhand = item">Put in hand</a></td>
+		<td><a ng-click="items.listItem(item)">Sell online</a></td>
+	</tr>
+</table>

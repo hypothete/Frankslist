@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  <title>Frankslist</title>
+  <link rel="stylesheet" href="css/bootstrap.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
+
+
+</head>
+<body>
+  <div ng-app="consoleApp">
+    <div class="container" ng-controller="appCtrl">
+    
+      <a href="#"><h1>Frankslist</h1></a>
+
+      <div class="row">
+
+          <div class="span4">
+              <div class="navbar" bs-navbar>
+                <div class="navbar-inner">
+                  <ul class="nav nav-stacked">
+                    <li data-match-route="/"><a href="index.html#/">Start Menu</a></li>
+                    <li data-match-route="/house"><a href="index.html#/house">House</a></li>
+                    <li data-match-route="/list"><a href="index.html#/list">Online Listings</a></li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+
+          <div class="span4">
+              <h3>GDH: <div class="progress"><div class="bar" style="width:{{player.gdh}}%"></div></div>
+              </h3>
+          </div>
+
+          <div class="span4 ralign">
+              <h3>Time {{player.timestring}}<br>${{player.money.toFixed(2)}}/800
+              </h3>
+          </div>
+
+        
+      </div>
+
+      <div class="row">
+        <div class="span12" >
+          <div class="well overflow">
+            <ng-view></ng-view>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="span12" >
+          <div class="well ">
+            All code and assets by <a href="http://hypothete.com/">Duncan Alexander</a> 2013
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+  <script src="lib/angular/angular.js"></script>
+  <script src="js/angular-strap.js"></script>
+  <script src="js/jquery-1.9.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/d3.v3.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+  
+  
+  
+  
+</body>
+</html>
