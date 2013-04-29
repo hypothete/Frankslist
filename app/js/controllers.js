@@ -20,7 +20,7 @@ app.controller("appCtrl", function($scope, itemService, playerService){
 		}
 		else{
 			console.log($scope.player.time);
-			if($scope.player.money >= 1000){
+			if($scope.player.money >= 800){
 				if($scope.player.gdh > 75){
 					window.location="index.html#/winhigh"; //what a hack. do this in angular.
 				}
