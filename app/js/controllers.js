@@ -9,7 +9,7 @@ app.controller("appCtrl", function($scope, itemService, playerService){
 
 	var countdown = function(){
 		if($scope.player.time > 0){
-			$scope.player.time -= 100;
+			$scope.player.time -= 1;
 
 			var date = new Date(null);
 			date.setSeconds($scope.player.time);
