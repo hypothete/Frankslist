@@ -1,6 +1,6 @@
 FRANKSLIST - 0.0.1
 
-Made for the April 2013 Ludum Dare #48 challenge
+Made for the April 2013 Ludum Dare #26 challenge
 
 by Duncan Alexander - hypothete.com
 
